@@ -85,10 +85,10 @@ namespace Lab1Sem3 {
       if (!string.IsNullOrWhiteSpace(textBox1.Text)) {
         if (!string.IsNullOrWhiteSpace(textBox2.Text)) {
           if (!string.IsNullOrWhiteSpace(textBox3.Text)) {
-            if (int.TryParse(textBox4.Text, out schoolNumber2) && (schoolNumber2 > 0)) {
+            if (int.TryParse(textBox4.Text, out schoolNumber2) && (schoolNumber2 <= 5)) {
               if (int.TryParse(textBox5.Text, out programming2) && (programming2 > 0)) {
                 if (int.TryParse(textBox6.Text, out design2) && (design2 > 0)) {
-                  SchoolboyInfo newStudent = new SchoolboyInfo(textBox1.Text, textBox2.Text, textBox3.Text, int.Parse(textBox4.Text), int.Parse(textBox4.Text), int.Parse(textBox4.Text));
+                  SchoolboyInfo newStudent = new SchoolboyInfo(textBox1.Text, textBox2.Text, textBox3.Text, int.Parse(textBox4.Text), int.Parse(textBox5.Text), int.Parse(textBox6.Text));
                   SchoolboyInfo.WriteInFile(newStudent);
                 } else {
                   MessageBox.Show("Error input Design", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
