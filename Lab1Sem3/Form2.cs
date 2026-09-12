@@ -42,7 +42,6 @@ namespace Lab1Sem3 {
         }
       } else {
         MessageBox.Show("Incorrect speed entry. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
       }
     }
   }
